@@ -1,11 +1,10 @@
 <h1>Система решения математических уравнений.</h1>
 
 <form action="" method="post">
-    <h3>Тип уравнения</h3>
-    <input type="radio" name="type" value="linear" checked> Линейное
+    <h3>Выберите тип уравнения:</h3>
+    <input type="radio" name="type" value="linear"> Линейное
     <input type="radio" name="type" value="quadratic"> Квадратное
+    <p class="submit">
+        <input type="submit" value="Выбрать">
+    </p>
 </form>
-
-<%= render "linear_form" %>
-<%= render "quadratic_form" %>
-<%= render "result" %>
