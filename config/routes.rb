@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'main/index'
-  post 'type', to: 'main#type'
+  post 'arguments', to: 'main#arguments'
   
   root 'main#index'
 end

@@ -2,7 +2,7 @@ class MainController < ApplicationController
   def index
   end
 
-  def type
+  def arguments
     @equation = Equation.create(type: "#{params['type']}")
   end
 end
