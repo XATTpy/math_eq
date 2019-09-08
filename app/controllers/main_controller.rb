@@ -11,6 +11,10 @@ class MainController < ApplicationController
     equation = Equation.last
     equation.update(a: a, b: b)
     @equation = equation
-    render json: @equation
+    if @equation.valid?
+      render json: @equation
+    else
+      render 'form'
+    end
   end
 end
