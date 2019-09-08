@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_09_08_115623) do
     t.string "form"
     t.float "a"
     t.float "b"
+    t.float "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
