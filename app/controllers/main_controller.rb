@@ -11,5 +11,6 @@ class MainController < ApplicationController
     equation = Equation.last
     equation.update(a: a, b: b)
     @equation = equation
+    render json: @equation
   end
 end
