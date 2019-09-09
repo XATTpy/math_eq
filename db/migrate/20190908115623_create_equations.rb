@@ -6,8 +6,6 @@ class CreateEquations < ActiveRecord::Migration[5.2]
       t.float :a
       t.float :b
       t.float :result
-
-      t.timestamps
     end
   end
 end
