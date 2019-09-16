@@ -1,0 +1,14 @@
+<h2><%= @equation.get_form %></h2>
+
+<form action="/equation/update" method="put">
+    <h3>Введите параметры уравнения:</h3>
+    <p class="field">
+        a = <input required type="number" step="any" name="a" placeholder="0,0">
+    </p>
+    <p class="field">
+        b = <input required type="number" step="any" name="b" placeholder="0,0">
+    </p>
+    <p class="submit">
+        <input type="submit" value="Решить уравнение" name="type_index" value=<%= @type_index %>>
+    </p>
+</form>
