@@ -7,7 +7,6 @@ class EquationController < ApplicationController
         equation = Equation.create(type_index)
         if equation
             @equation = equation
-            @type_index = type_index
         else
             render json: {errors: category.errors}, status: :unprocessable_entity
         end
@@ -16,7 +15,7 @@ class EquationController < ApplicationController
     def show
         equation = Equation.create(params[:type_index].to_i)
         a, b = params[:a], params[:b]
-        equation.a, equation.b = a, b
-        render json: equation
+        equation.a, equation.b = a.to_f, b.to_f
+        render json: {result: equation.get_result}
     end
 end
