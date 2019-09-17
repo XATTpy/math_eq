@@ -5,11 +5,7 @@ class EquationController < ApplicationController
     def create
         type_index = params[:type].to_i
         equation = Equation.create(type_index)
-        if equation
-            @equation = equation
-        else
-            render json: {errors: category.errors}, status: :unprocessable_entity
-        end
+        @equation = equation
     end
 
     def show
