@@ -28,7 +28,7 @@ class Linear < Equation
     end
 
     def get_result
-        -@b/@a
+        -b/a
     end
 end
 
