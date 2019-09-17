@@ -9,19 +9,19 @@ describe Equation do
     end
 
     it 'has right index of type' do
-        @linear_equation.class.should eq Linear.new.class
-        @quadratic_equation.class.should eq Quadratic.new.class
+        expect(@linear_equation.class).to eq Linear.new.class
+        expect(@quadratic_equation.class).to eq Quadratic.new.class
     end
 
     it 'has right forms of equations' do
-        @linear_equation.get_form.should eq 'ax + b = 0'
-        @quadratic_equation.get_form.should eq 'ax^2 + b = 0'
+        expect(@linear_equation.get_form).to eq 'ax + b = 0'
+        expect(@quadratic_equation.get_form).to eq 'ax^2 + b = 0'
     end
 
     it 'has right calculation' do
         linear_result = -2
         quadratic_result = 3
-        @linear_equation.get_result.should eq linear_result
-        @quadratic_equation.get_result.should eq quadratic_result
+        expect(@linear_equation.get_result).to eq linear_result
+        expect(@quadratic_equation.get_result).to eq quadratic_result
     end
 end
